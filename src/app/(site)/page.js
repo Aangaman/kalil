@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { prisma } from "@/lib/prisma";
 import PropertyCard from "@/components/PropertyCard";
 import { PROPERTY_TYPES } from "@/lib/constants";
@@ -26,6 +27,19 @@ export default async function HomePage() {
   return (
     <div>
       <section className="relative overflow-hidden bg-primary-dark text-white">
+        <div className="absolute inset-0">
+          <Image
+            src="https://upload.wikimedia.org/wikipedia/commons/4/42/Un_aper%C3%A7u_de_la_ville_de_conakry.jpg"
+            alt="Vue aérienne de Conakry, capitale de la Guinée"
+            fill
+            priority
+            sizes="100vw"
+            className="object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-primary-dark via-primary-dark/85 to-primary-dark/40" />
+          <div className="absolute inset-0 bg-black/10" />
+        </div>
+
         <div className="container-page relative z-10 flex flex-col gap-6 py-20 md:py-28">
           <span className="w-fit rounded-full bg-white/10 px-4 py-1 text-xs font-semibold uppercase tracking-wide text-accent">
             Pensé pour la diaspora guinéenne en Europe
@@ -53,10 +67,15 @@ export default async function HomePage() {
             </Link>
           </div>
         </div>
-        <div className="pointer-events-none absolute inset-0 opacity-20">
-          <div className="absolute -right-24 -top-24 h-96 w-96 rounded-full bg-accent blur-3xl" />
-          <div className="absolute bottom-0 left-1/3 h-72 w-72 rounded-full bg-primary blur-3xl" />
-        </div>
+
+        <a
+          href="https://commons.wikimedia.org/wiki/File:Un_aper%C3%A7u_de_la_ville_de_conakry.jpg"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="absolute bottom-2 right-3 z-10 text-[10px] text-white/40 transition hover:text-white/70"
+        >
+          Photo : Alpha hmd / Wikimedia Commons (CC BY-SA 4.0)
+        </a>
       </section>
 
       <section className="border-b border-border bg-white py-10">
