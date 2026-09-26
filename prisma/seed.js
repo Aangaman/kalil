@@ -185,7 +185,7 @@ const properties = [
     featured: true,
     description:
       "Maison préfabriquée modulaire en ossature légère (structure acier + panneaux sandwich isolés), livrée en kit et montée sur site en quelques semaines. Idéale pour un premier projet rapide sur un terrain déjà acquis : résidence principale, maison d'hôtes ou bureau de chantier. Comprend 2 chambres, un salon, une salle d'eau et une kitchenette. Fondations sur plots ou dalle béton selon le terrain, toiture étanche, câblage électrique et plomberie pré-installés en usine. Plusieurs surfaces disponibles (30 à 120 m²) et plans personnalisables sur devis. Livraison et montage assurés par notre équipe partenaire.\n\nPhoto d'illustration : SamHolt6 / Wikimedia Commons (CC BY-SA 4.0).",
-    images: ["/images/maison-prefabriquee.jpg"],
+    images: ["/images/maison-prefabriquee.jpeg"],
   },
 ];
 
