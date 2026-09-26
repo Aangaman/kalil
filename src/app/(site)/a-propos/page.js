@@ -3,7 +3,7 @@ import Link from "next/link";
 export const metadata = {
   title: "À propos",
   description:
-    "Kalil Immo accompagne la diaspora guinéenne en Europe dans ses projets immobiliers en Guinée : achat, vente, location et gestion à distance.",
+    "Afrique Business Global accompagne la diaspora guinéenne en Europe dans ses projets immobiliers en Guinée : achat, vente, location et gestion à distance.",
 };
 
 const values = [
@@ -29,7 +29,7 @@ export default function AboutPage() {
           Le pont immobilier entre la diaspora et la Guinée
         </h1>
         <p className="mt-4 leading-relaxed text-ink-soft">
-          Kalil Immo est née d&apos;un constat simple : de nombreux Guinéens
+          Afrique Business Global est née d&apos;un constat simple : de nombreux Guinéens
           établis en Europe souhaitent investir, construire ou préparer un
           retour au pays, mais manquent d&apos;un interlocuteur de confiance
           sur place. Notre plateforme rassemble des biens vérifiés — terrains,

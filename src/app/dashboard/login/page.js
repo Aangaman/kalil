@@ -12,10 +12,10 @@ export default function LoginPage() {
     <div className="flex min-h-screen items-center justify-center bg-primary-dark px-4">
       <div className="w-full max-w-sm rounded-xl bg-white p-8 shadow-lg">
         <div className="flex items-center gap-2">
-          <span className="flex h-9 w-9 items-center justify-center rounded-md bg-primary text-sm font-bold text-white">
-            KI
+          <span className="flex h-9 w-9 items-center justify-center rounded-md bg-primary text-xs font-bold text-white">
+            ABG
           </span>
-          <span className="text-lg font-semibold text-ink">Kalil Immo</span>
+          <span className="text-lg font-semibold text-ink">Afrique Business Global</span>
         </div>
 
         <h1 className="mt-6 text-xl font-bold text-ink">Espace administration</h1>
@@ -34,7 +34,7 @@ export default function LoginPage() {
               type="email"
               required
               className="rounded-md border border-border px-3 py-2 text-sm"
-              placeholder="admin@kalilimmo.com"
+              placeholder="admin@afriquebusinessglobal.com"
             />
           </div>
 

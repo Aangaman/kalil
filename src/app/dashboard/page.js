@@ -28,7 +28,7 @@ export default async function DashboardHome() {
     <div>
       <h1 className="text-2xl font-bold text-ink">Aperçu</h1>
       <p className="mt-1 text-ink-soft">
-        Bienvenue dans l&apos;espace d&apos;administration de Kalil Immo.
+        Bienvenue dans l&apos;espace d&apos;administration d&apos;Afrique Business Global.
       </p>
 
       <div className="mt-8 grid grid-cols-2 gap-4 lg:grid-cols-4">

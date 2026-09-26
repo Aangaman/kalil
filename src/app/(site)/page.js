@@ -1,8 +1,12 @@
 import Link from "next/link";
-import Image from "next/image";
 import { prisma } from "@/lib/prisma";
 import PropertyCard from "@/components/PropertyCard";
 import { PROPERTY_TYPES } from "@/lib/constants";
+
+const HOME_QUICK_TYPES_ORDER = ["prefabriquee", "terrain", "appartement", "maison", "boutique"];
+const HOME_QUICK_TYPES = HOME_QUICK_TYPES_ORDER.map((value) =>
+  PROPERTY_TYPES.find((t) => t.value === value)
+).filter(Boolean);
 
 async function getFeatured() {
   return prisma.property.findMany({
@@ -28,14 +32,16 @@ export default async function HomePage() {
     <div>
       <section className="relative overflow-hidden bg-primary-dark text-white">
         <div className="absolute inset-0">
-          <Image
-            src="https://upload.wikimedia.org/wikipedia/commons/4/42/Un_aper%C3%A7u_de_la_ville_de_conakry.jpg"
-            alt="Vue aérienne de Conakry, capitale de la Guinée"
-            fill
-            priority
-            sizes="100vw"
-            className="object-cover"
-          />
+          <video
+            autoPlay
+            muted
+            loop
+            playsInline
+            preload="auto"
+            className="h-full w-full object-cover"
+          >
+            <source src="/images/assemblage.mp4" type="video/mp4" />
+          </video>
           <div className="absolute inset-0 bg-gradient-to-r from-primary-dark via-primary-dark/85 to-primary-dark/40" />
           <div className="absolute inset-0 bg-black/10" />
         </div>
@@ -49,7 +55,7 @@ export default async function HomePage() {
           </h1>
           <p className="max-w-xl text-lg text-white/80">
             Terrains, maisons, appartements et boutiques vérifiés en Guinée.
-            Kalil Immo vous accompagne à distance, de la sélection du bien
+            Afrique Business Global vous accompagne à distance, de la sélection du bien
             jusqu&apos;à la signature.
           </p>
           <div className="flex flex-wrap gap-4 pt-2">
@@ -67,28 +73,32 @@ export default async function HomePage() {
             </Link>
           </div>
         </div>
-
-        <a
-          href="https://commons.wikimedia.org/wiki/File:Un_aper%C3%A7u_de_la_ville_de_conakry.jpg"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="absolute bottom-2 right-3 z-10 text-[10px] text-white/40 transition hover:text-white/70"
-        >
-          Photo : Alpha hmd / Wikimedia Commons (CC BY-SA 4.0)
-        </a>
       </section>
 
       <section className="border-b border-border bg-white py-10">
-        <div className="container-page grid grid-cols-2 gap-6 sm:grid-cols-4">
-          {PROPERTY_TYPES.slice(0, 4).map((t) => (
-            <Link
-              key={t.value}
-              href={`/showroom?type=${t.value}`}
-              className="rounded-lg border border-border p-4 text-center transition hover:border-primary hover:bg-primary-soft"
-            >
-              <span className="text-sm font-semibold text-ink">{t.label}</span>
-            </Link>
-          ))}
+        <div className="container-page grid grid-cols-2 gap-6 sm:grid-cols-3 lg:grid-cols-5">
+          {HOME_QUICK_TYPES.map((t) =>
+            t.value === "prefabriquee" ? (
+              <Link
+                key={t.value}
+                href={`/showroom?type=${t.value}`}
+                className="relative rounded-lg border-2 border-accent bg-accent/10 p-4 text-center shadow-sm transition hover:bg-accent/20"
+              >
+                <span className="absolute -top-2 left-1/2 -translate-x-1/2 rounded-full bg-accent px-2 py-0.5 text-[10px] font-bold uppercase tracking-wide text-ink shadow">
+                  Nouveau
+                </span>
+                <span className="text-sm font-semibold text-accent-dark">{t.label}</span>
+              </Link>
+            ) : (
+              <Link
+                key={t.value}
+                href={`/showroom?type=${t.value}`}
+                className="rounded-lg border border-border p-4 text-center transition hover:border-primary hover:bg-primary-soft"
+              >
+                <span className="text-sm font-semibold text-ink">{t.label}</span>
+              </Link>
+            )
+          )}
         </div>
       </section>
 

@@ -172,6 +172,21 @@ const properties = [
       "Terrain de 600 m² viabilisé (eau et électricité en bordure), dans un lotissement clôturé. Zone calme à 30 minutes de Conakry, parfait pour un premier projet de construction pour la diaspora.",
     images: ["https://picsum.photos/seed/kalil-terrain-coyah-1/1200/800"],
   },
+  {
+    title: "Maison préfabriquée modulaire clé en main",
+    type: "prefabriquee",
+    transactionType: "vente",
+    price: 145000000,
+    city: "Conakry",
+    neighborhood: "Livrable sur tout le territoire",
+    surface: 60,
+    bedrooms: 2,
+    bathrooms: 1,
+    featured: true,
+    description:
+      "Maison préfabriquée modulaire en ossature légère (structure acier + panneaux sandwich isolés), livrée en kit et montée sur site en quelques semaines. Idéale pour un premier projet rapide sur un terrain déjà acquis : résidence principale, maison d'hôtes ou bureau de chantier. Comprend 2 chambres, un salon, une salle d'eau et une kitchenette. Fondations sur plots ou dalle béton selon le terrain, toiture étanche, câblage électrique et plomberie pré-installés en usine. Plusieurs surfaces disponibles (30 à 120 m²) et plans personnalisables sur devis. Livraison et montage assurés par notre équipe partenaire.\n\nPhoto d'illustration : SamHolt6 / Wikimedia Commons (CC BY-SA 4.0).",
+    images: ["/images/maison-prefabriquee.jpg"],
+  },
 ];
 
 const posts = [
@@ -193,7 +208,7 @@ Faites-vous accompagner par une agence sérieuse ou un notaire qui pourra vérif
 **4. Prévoir les frais annexes**
 Frais de notaire, d'enregistrement et de bornage doivent être budgétisés en plus du prix d'achat.
 
-Chez Kalil Immo, nous accompagnons la diaspora guinéenne à chaque étape, avec vérification des documents et visites filmées pour les acheteurs à distance.`,
+Chez Afrique Business Global, nous accompagnons la diaspora guinéenne à chaque étape, avec vérification des documents et visites filmées pour les acheteurs à distance.`,
     coverImage: "https://picsum.photos/seed/kalil-blog-terrain/1200/700",
   },
   {
@@ -208,7 +223,7 @@ Chez Kalil Immo, nous accompagnons la diaspora guinéenne à chaque étape, avec
 - **Reçus de paiement des taxes foncières**
 - **Acte de vente précédent** (si le bien a déjà changé de propriétaire)
 
-N'hésitez jamais à demander une copie de ces documents avant tout versement d'acompte, et faites-les vérifier par un notaire indépendant. Chez Kalil Immo, chaque bien publié sur notre plateforme est vérifié avant mise en ligne.`,
+N'hésitez jamais à demander une copie de ces documents avant tout versement d'acompte, et faites-les vérifier par un notaire indépendant. Chez Afrique Business Global, chaque bien publié sur notre plateforme est vérifié avant mise en ligne.`,
     coverImage: "https://picsum.photos/seed/kalil-blog-documents/1200/700",
   },
   {
@@ -247,7 +262,7 @@ Privilégiez les virements bancaires traçables plutôt que les transferts infor
 **4. Restez en contact avec un représentant de confiance**
 Un membre de la famille ou un professionnel mandaté sur place peut représenter vos intérêts au quotidien.
 
-Kalil Immo propose un service d'accompagnement pour la diaspora, du suivi de chantier à la gestion locative complète.`,
+Afrique Business Global propose un service d'accompagnement pour la diaspora, du suivi de chantier à la gestion locative complète.`,
     coverImage: "https://picsum.photos/seed/kalil-blog-diaspora/1200/700",
   },
 ];

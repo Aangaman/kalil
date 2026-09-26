@@ -19,11 +19,11 @@ export default async function DashboardLayout({ children }) {
   return (
     <div className="flex min-h-screen bg-paper">
       <aside className="hidden w-64 shrink-0 flex-col border-r border-border bg-white md:flex">
-        <div className="flex h-16 items-center gap-2 border-b border-border px-6">
-          <span className="flex h-8 w-8 items-center justify-center rounded-md bg-primary text-xs font-bold text-white">
-            KI
+        <div className="flex h-16 items-center gap-2 border-b border-border px-4">
+          <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-md bg-primary text-[10px] font-bold text-white">
+            ABG
           </span>
-          <span className="font-semibold text-ink">Kalil Immo</span>
+          <span className="truncate text-sm font-semibold text-ink">Afrique Business Global</span>
         </div>
 
         <nav className="flex flex-1 flex-col gap-1 p-4">
@@ -46,7 +46,7 @@ export default async function DashboardLayout({ children }) {
 
       <div className="flex flex-1 flex-col">
         <header className="flex h-16 items-center justify-between border-b border-border bg-white px-4 md:hidden">
-          <span className="font-semibold text-ink">Kalil Immo — Admin</span>
+          <span className="truncate text-sm font-semibold text-ink">Afrique Business Global — Admin</span>
           <LogoutButton className="text-sm font-medium text-primary" />
         </header>
 

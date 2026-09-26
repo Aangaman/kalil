@@ -17,7 +17,7 @@ export default async function BlogPage() {
   return (
     <div className="container-page py-12">
       <div className="max-w-2xl">
-        <h1 className="text-3xl font-bold text-ink">Le blog Kalil Immo</h1>
+        <h1 className="text-3xl font-bold text-ink">Le blog Afrique Business Global</h1>
         <p className="mt-2 text-ink-soft">
           Guides pratiques, conseils juridiques et actualités du marché
           immobilier guinéen pour vous accompagner depuis l&apos;Europe.

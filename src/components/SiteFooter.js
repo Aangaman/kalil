@@ -6,10 +6,10 @@ export default function SiteFooter() {
       <div className="container-page grid gap-10 py-14 md:grid-cols-4">
         <div>
           <div className="flex items-center gap-2">
-            <span className="flex h-9 w-9 items-center justify-center rounded-md bg-primary text-sm font-bold text-white">
-              KI
+            <span className="flex h-9 w-9 items-center justify-center rounded-md bg-primary text-xs font-bold text-white">
+              ABG
             </span>
-            <span className="text-lg font-semibold text-ink">Kalil Immo</span>
+            <span className="text-lg font-semibold text-ink">Afrique Business Global</span>
           </div>
           <p className="mt-4 text-sm leading-relaxed text-ink-soft">
             La plateforme immobilière qui connecte la diaspora guinéenne en
@@ -43,13 +43,8 @@ export default function SiteFooter() {
           <ul className="mt-4 space-y-2 text-sm text-ink-soft">
             <li>Conakry, République de Guinée</li>
             <li>
-              <a href="tel:+224600000000" className="hover:text-primary">
-                +224 600 00 00 00
-              </a>
-            </li>
-            <li>
-              <a href="mailto:contact@kalilimmo.com" className="hover:text-primary">
-                contact@kalilimmo.com
+              <a href="mailto:contact@afriquebusinessglobal.com" className="hover:text-primary">
+                contact@afriquebusinessglobal.com
               </a>
             </li>
           </ul>
@@ -57,9 +52,12 @@ export default function SiteFooter() {
       </div>
 
       <div className="border-t border-border py-6">
-        <p className="container-page text-center text-xs text-ink-soft">
-          © {new Date().getFullYear()} Kalil Immo. Tous droits réservés.
-        </p>
+        <div className="container-page flex flex-col items-center gap-2 text-center text-xs text-ink-soft sm:flex-row sm:justify-between">
+          <p>© {new Date().getFullYear()} Afrique Business Global. Tous droits réservés.</p>
+          <Link href="/mentions-legales" className="hover:text-primary">
+            Mentions légales
+          </Link>
+        </div>
       </div>
     </footer>
   );

@@ -8,11 +8,11 @@ const inter = Inter({
 
 export const metadata = {
   title: {
-    default: "Kalil Immo — Immobilier en Guinée pour la diaspora",
-    template: "%s — Kalil Immo",
+    default: "Afrique Business Global — Immobilier en Guinée pour la diaspora",
+    template: "%s — Afrique Business Global",
   },
   description:
-    "Terrains, maisons, appartements et boutiques en Guinée. Kalil Immo accompagne la diaspora guinéenne en Europe dans ses projets immobiliers au pays.",
+    "Terrains, maisons, appartements et boutiques en Guinée. Afrique Business Global accompagne la diaspora guinéenne en Europe dans ses projets immobiliers au pays.",
 };
 
 export default function RootLayout({ children }) {

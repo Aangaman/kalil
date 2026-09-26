@@ -1,9 +1,10 @@
 import ContactForm from "@/components/ContactForm";
+import { whatsappLink, WHATSAPP_DISPLAY } from "@/lib/constants";
 
 export const metadata = {
   title: "Contact",
   description:
-    "Contactez Kalil Immo pour publier une annonce ou obtenir des informations sur nos biens en Guinée.",
+    "Contactez Afrique Business Global pour publier une annonce ou obtenir des informations sur nos biens en Guinée.",
 };
 
 export default function ContactPage() {
@@ -20,15 +21,20 @@ export default function ContactPage() {
 
           <div className="mt-8 space-y-4 text-sm">
             <div>
-              <p className="font-semibold text-ink">Téléphone / WhatsApp</p>
-              <a href="tel:+224600000000" className="text-ink-soft hover:text-primary">
-                +224 600 00 00 00
+              <p className="font-semibold text-ink">WhatsApp</p>
+              <a
+                href={whatsappLink()}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-ink-soft hover:text-primary"
+              >
+                {WHATSAPP_DISPLAY}
               </a>
             </div>
             <div>
               <p className="font-semibold text-ink">Email</p>
-              <a href="mailto:contact@kalilimmo.com" className="text-ink-soft hover:text-primary">
-                contact@kalilimmo.com
+              <a href="mailto:contact@afriquebusinessglobal.com" className="text-ink-soft hover:text-primary">
+                contact@afriquebusinessglobal.com
               </a>
             </div>
             <div>

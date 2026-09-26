@@ -5,6 +5,7 @@ export const PROPERTY_TYPES = [
   { value: "boutique", label: "Boutique / Local commercial" },
   { value: "villa", label: "Villa" },
   { value: "immeuble", label: "Immeuble" },
+  { value: "prefabriquee", label: "Maison préfabriquée" },
 ];
 
 export const TRANSACTION_TYPES = [
@@ -64,7 +65,8 @@ export function formatDate(date) {
   }).format(new Date(date));
 }
 
-export const WHATSAPP_NUMBER = "224600000000";
+export const WHATSAPP_NUMBER = "32466056370";
+export const WHATSAPP_DISPLAY = "+32 466 05 63 70";
 
 export function whatsappLink(message) {
   const base = `https://wa.me/${WHATSAPP_NUMBER}`;

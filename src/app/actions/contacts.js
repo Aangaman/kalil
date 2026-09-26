@@ -3,6 +3,7 @@
 import { prisma } from "@/lib/prisma";
 import { getSession } from "@/lib/auth";
 import { revalidatePath } from "next/cache";
+import { sendContactNotification } from "@/lib/email";
 
 export async function submitContactMessage(prevState, formData) {
   const name = formData.get("name")?.toString().trim();
@@ -17,7 +18,7 @@ export async function submitContactMessage(prevState, formData) {
     return { ok: false, error: "Merci de remplir votre nom, votre email et votre message." };
   }
 
-  await prisma.contactMessage.create({
+  const created = await prisma.contactMessage.create({
     data: {
       name,
       email,
@@ -26,6 +27,16 @@ export async function submitContactMessage(prevState, formData) {
       message,
       propertyId: propertyId || undefined,
     },
+    include: { property: { select: { title: true } } },
+  });
+
+  await sendContactNotification({
+    name,
+    email,
+    phone,
+    country,
+    message,
+    propertyTitle: created.property?.title ?? null,
   });
 
   return { ok: true, error: null };

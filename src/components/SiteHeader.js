@@ -14,16 +14,16 @@ export default function SiteHeader() {
   return (
     <header className="sticky top-0 z-40 border-b border-border bg-paper/95 backdrop-blur">
       <div className="container-page relative flex h-16 items-center justify-between">
-        <Link href="/" className="flex items-center gap-2">
-          <span className="flex h-9 w-9 items-center justify-center rounded-md bg-primary text-sm font-bold text-white">
-            KI
+        <Link href="/" className="flex shrink-0 items-center gap-2">
+          <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-md bg-primary text-xs font-bold text-white">
+            ABG
           </span>
-          <span className="text-lg font-semibold tracking-tight text-ink">
-            Kalil Immo
+          <span className="whitespace-nowrap text-base font-semibold tracking-tight text-ink lg:text-lg">
+            Afrique Business Global
           </span>
         </Link>
 
-        <nav className="hidden items-center gap-7 md:flex">
+        <nav className="hidden items-center gap-4 md:flex lg:gap-7">
           {links.map((link) => (
             <Link
               key={link.href}
