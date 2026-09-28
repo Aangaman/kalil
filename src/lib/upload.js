@@ -7,7 +7,7 @@ export async function saveUploadedFiles(files, subfolder) {
   const validFiles = files.filter((f) => f && typeof f === "object" && f.size > 0);
   if (validFiles.length === 0) return [];
 
-  const useBlob = !!process.env.BLOB_READ_WRITE_TOKEN;
+  const useBlob = !!process.env.BLOB_READ_WRITE_TOKEN || !!process.env.VERCEL;
   const urls = [];
 
   for (const file of validFiles) {
