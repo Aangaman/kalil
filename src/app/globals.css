@@ -2,16 +2,16 @@
 @plugin "@tailwindcss/typography";
 
 :root {
-  --color-paper: #fbfaf7;
-  --color-ink: #1c2a22;
-  --color-ink-soft: #4b5a50;
-  --color-primary: #0f6b41;
-  --color-primary-dark: #0a4a2c;
-  --color-primary-soft: #e7f2ec;
-  --color-accent: #d3a13a;
+  --color-paper: #f8f9fc;
+  --color-ink: #101c33;
+  --color-ink-soft: #4c5972;
+  --color-primary: #163a63;
+  --color-primary-dark: #0a1d38;
+  --color-primary-soft: #e9edf5;
+  --color-accent: #d4a017;
   --color-accent-dark: #b3841f;
-  --color-border: #e4e1d8;
-  --color-danger: #b3402f;
+  --color-border: #dde2ec;
+  --color-danger: #c0392b;
 }
 
 @theme inline {

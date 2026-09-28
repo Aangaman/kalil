@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 
 export default function SiteFooter() {
@@ -6,9 +7,7 @@ export default function SiteFooter() {
       <div className="container-page grid gap-10 py-14 md:grid-cols-4">
         <div>
           <div className="flex items-center gap-2">
-            <span className="flex h-9 w-9 items-center justify-center rounded-md bg-primary text-xs font-bold text-white">
-              ABG
-            </span>
+            <Image src="/images/logo.png" alt="Afrique Business Global" width={144} height={72} className="h-10 w-auto" />
             <span className="text-lg font-semibold text-ink">Afrique Business Global</span>
           </div>
           <p className="mt-4 text-sm leading-relaxed text-ink-soft">

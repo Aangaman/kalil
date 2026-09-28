@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { getSession } from "@/lib/auth";
 import LogoutButton from "@/components/dashboard/LogoutButton";
@@ -20,9 +21,7 @@ export default async function DashboardLayout({ children }) {
     <div className="flex min-h-screen bg-paper">
       <aside className="hidden w-64 shrink-0 flex-col border-r border-border bg-white md:flex">
         <div className="flex h-16 items-center gap-2 border-b border-border px-4">
-          <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-md bg-primary text-[10px] font-bold text-white">
-            ABG
-          </span>
+          <Image src="/images/logo.png" alt="Afrique Business Global" width={144} height={72} className="h-8 w-auto shrink-0" />
           <span className="truncate text-sm font-semibold text-ink">Afrique Business Global</span>
         </div>
 

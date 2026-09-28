@@ -23,7 +23,7 @@ export async function sendContactNotification({ name, email, phone, country, mes
 
   const html = `
     <div style="font-family: sans-serif; max-width: 560px; margin: 0 auto;">
-      <h2 style="color: #0a4a2c;">Nouveau message reçu</h2>
+      <h2 style="color: #0a1d38;">Nouveau message reçu</h2>
       ${propertyTitle ? `<p><strong>Bien concerné :</strong> ${escapeHtml(propertyTitle)}</p>` : ""}
       <p><strong>Nom :</strong> ${escapeHtml(name)}</p>
       <p><strong>Email :</strong> ${escapeHtml(email)}</p>

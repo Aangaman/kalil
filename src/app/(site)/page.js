@@ -30,28 +30,42 @@ export default async function HomePage() {
 
   return (
     <div>
-      <section className="relative overflow-hidden bg-primary-dark text-white">
+      <section className="relative overflow-hidden bg-[#04101f] text-white">
         <div className="absolute inset-0">
+          <div className="absolute inset-0 bg-[#04101f]" />
           <video
             autoPlay
             muted
             loop
             playsInline
             preload="auto"
-            className="h-full w-full object-cover"
+            className="h-full w-full object-cover opacity-60"
           >
             <source src="/images/assemblage.mp4" type="video/mp4" />
           </video>
-          <div className="absolute inset-0 bg-gradient-to-r from-primary-dark via-primary-dark/85 to-primary-dark/40" />
-          <div className="absolute inset-0 bg-black/10" />
+          <div className="absolute inset-0 bg-gradient-to-br from-[#04101f] via-primary-dark/75 to-[#04101f]/95" />
+          <div className="absolute -top-40 -right-24 h-[28rem] w-[28rem] rounded-full bg-accent/25 blur-[130px]" />
+          <div className="absolute -bottom-32 -left-24 h-[28rem] w-[28rem] rounded-full bg-primary/40 blur-[130px]" />
+          <div
+            className="absolute inset-0 opacity-[0.07]"
+            style={{
+              backgroundImage:
+                "linear-gradient(to right, white 1px, transparent 1px), linear-gradient(to bottom, white 1px, transparent 1px)",
+              backgroundSize: "48px 48px",
+            }}
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-[#04101f] via-transparent to-transparent" />
         </div>
 
         <div className="container-page relative z-10 flex flex-col gap-6 py-20 md:py-28">
-          <span className="w-fit rounded-full bg-white/10 px-4 py-1 text-xs font-semibold uppercase tracking-wide text-accent">
+          <span className="w-fit rounded-full border border-white/15 bg-white/5 px-4 py-1 text-xs font-semibold uppercase tracking-wide text-accent backdrop-blur-md">
             Pensé pour la diaspora guinéenne en Europe
           </span>
           <h1 className="max-w-2xl text-4xl font-bold leading-tight md:text-5xl">
-            Investissez au pays, en toute confiance
+            Investissez au pays,{" "}
+            <span className="bg-gradient-to-r from-accent to-primary-soft bg-clip-text text-transparent">
+              en toute confiance
+            </span>
           </h1>
           <p className="max-w-xl text-lg text-white/80">
             Terrains, maisons, appartements et boutiques vérifiés en Guinée.
@@ -67,7 +81,7 @@ export default async function HomePage() {
             </Link>
             <Link
               href="/contact"
-              className="rounded-md border border-white/30 px-6 py-3 text-sm font-semibold text-white transition hover:bg-white/10"
+              className="rounded-md border border-white/20 bg-white/5 px-6 py-3 text-sm font-semibold text-white backdrop-blur-md transition hover:bg-white/10"
             >
               Publier une annonce
             </Link>

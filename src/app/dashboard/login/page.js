@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useActionState } from "react";
 import { login } from "@/app/actions/auth";
 
@@ -12,9 +13,7 @@ export default function LoginPage() {
     <div className="flex min-h-screen items-center justify-center bg-primary-dark px-4">
       <div className="w-full max-w-sm rounded-xl bg-white p-8 shadow-lg">
         <div className="flex items-center gap-2">
-          <span className="flex h-9 w-9 items-center justify-center rounded-md bg-primary text-xs font-bold text-white">
-            ABG
-          </span>
+          <Image src="/images/logo.png" alt="Afrique Business Global" width={144} height={72} className="h-9 w-auto" />
           <span className="text-lg font-semibold text-ink">Afrique Business Global</span>
         </div>
 

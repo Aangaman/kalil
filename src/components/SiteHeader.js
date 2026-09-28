@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { whatsappLink } from "@/lib/constants";
 import MobileMenu from "@/components/MobileMenu";
@@ -5,6 +6,7 @@ import MobileMenu from "@/components/MobileMenu";
 const links = [
   { href: "/", label: "Accueil" },
   { href: "/showroom", label: "Showroom" },
+  { href: "/maison-prefabriquee", label: "Maison préfabriquée" },
   { href: "/blog", label: "Blog" },
   { href: "/a-propos", label: "À propos" },
   { href: "/contact", label: "Contact" },
@@ -15,9 +17,7 @@ export default function SiteHeader() {
     <header className="sticky top-0 z-40 border-b border-border bg-paper/95 backdrop-blur">
       <div className="container-page relative flex h-16 items-center justify-between">
         <Link href="/" className="flex shrink-0 items-center gap-2">
-          <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-md bg-primary text-xs font-bold text-white">
-            ABG
-          </span>
+          <Image src="/images/logo.png" alt="Afrique Business Global" width={144} height={72} className="h-10 w-auto shrink-0" priority />
           <span className="whitespace-nowrap text-base font-semibold tracking-tight text-ink lg:text-lg">
             Afrique Business Global
           </span>
